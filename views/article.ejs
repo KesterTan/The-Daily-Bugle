@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/homepage-styles.css" />
+    <title>The Bugle</title>
+  </head>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h4>The Bugle</h4>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="navBar">
+            <ul class="nav-links">
+                <li>
+                    <a href="/create">Create Article</a>
+                </li>
+                <li>
+                    <a href="/#feed">Articles</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+<style>  
+
+html body {
+    padding: 0;
+    margin: 0;
+    font-family: "Garamond", "Times New Roman", Serif;
+    font-size: 25px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Style */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Garamond", "Times New Roman", Serif;
+}
+
+header {
+    padding-top:20px;
+    background-color: beige;
+}
+
+.navBar{
+    background-color: beige;
+    padding: 5px;
+    min-height: 10vh;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: beige;
+}
+
+.logo {
+    color: grey;
+    text-transform: uppercase;
+}
+
+.h4, h4{
+    font-size: 50px;
+    letter-spacing: 0.3em;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-links a {
+    color: grey;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    font-size: 25px;
+    padding:10px;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.burger div {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+/*
+ul .no-bullet {
+    list-style: none;
+}
+*/
+
+.list-inline-item a i{
+    color: black;
+    
+}
+
+.list-inline-item a i:hover{
+    color: grey;
+}
+
+#copyright{
+    background-color: #eaeae7;
+    color: grey;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links{
+        width: 100%;
+        background-color: beige;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        min-height: 7vh;
+    }
+
+    .h4, h4 {
+        font-size: 20px;
+        letter-spacing: 10px;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 15vh;
+        top: 8vh;
+        background-color: beige;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        font-size: 10px;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+
+    .circular-img-div {
+        width: 30vw;
+        float: none;
+        display: block;
+        margin: 140px auto 40px 28vw;
+    }
+    
+    .title-text {
+        float: none;
+        display: block;
+        margin: 20px auto 20px 28vw;
+        font-size: 13px;
+    }
+
+    .title-work, .title-facts {
+        margin-top: 140px;
+    }
+    
+    .title-text-work1, .title-text-facts1 {
+        font-size: 13px;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+
+}
+
+/* To make navbar slide */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-90deg) translate(-6px, 8.5px);
+}
+
+.toggle .line2 {
+    transform: rotate(-90deg) translate(1px);
+}
+
+.toggle .line3 {
+    transform: rotate(-90deg) translate(8px, -8.5px);
+
+}
+
+
+/*Body Style*/
+.body {
+    padding-left: 100px;
+    padding-bottom: 80px;
+    padding-top: 100px;
+    display:flex;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black
+}
+
+.background {
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.register-button {
+    background-color: forestgreen;
+    border: none;
+    color:white;
+    padding:15px 15px;
+    font-size: 1.1rem;
+    font-family: "Garamond", "Times New Roman", Serif;
+    border-radius: 15px;
+}
+
+.body-left {
+    padding-top: 60px;
+}
+
+.body-right {
+    flex: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 450px;
+}
+
+img.graphic {
+    width: 400px;
+    height: 400px;
+}
+
+/*Feed*/
+#feed {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+/*Scroll Panel*/
+.scroll-panel {
+    padding:0 60px;
+}
+
+.panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.panel-title {
+    color: grey;
+}
+
+.panel-title :hover {
+    color: #2D31FA;
+}
+.panel-left {
+    display:flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.panel-username {
+    font-size: 2.5rem;
+}
+
+
+img.panel-logo {
+    width: 200px;
+    height: 200px;
+}
+
+
+/*Footer*/
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: beige;
+}
+
+
+
+
+
+/*Publishing Page*/
+
+.publish-body {
+    border-bottom: 0px solid black;
+    display:block;
+    margin: 40px;
+    padding: 40px;
+    padding-top: 80px;
+}
+
+h1.publish {
+    border-bottom: 3px double black;
+}
+
+input, textarea {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+input,textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+label {
+    font-size: 2.5rem;
+}
+
+form {
+  clear: both;
+}
+
+form input {
+  width: 100%;
+  clear: both;
+}
+
+.title {
+    margin-bottom:30px;
+}
+
+textarea {
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.submit {
+    display:flex;
+    justify-content:center;
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    background-color: forestgreen;
+    border: none;
+    color:white;
+    padding:15px 25px;
+    font-size: 1.4rem;
+    font-family: "Garamond", "Times New Roman", Serif;
+    border-radius: 15px;
+}
+
+/*Contact Us Page*/
+.contact-header-main {
+    display: flex;
+    
+}
+
+/*Article Page*/
+.article-body {
+    display:block;
+    margin: 40px;
+    padding: 40px;
+    padding-top: 80px;
+}
+
+.article-title {
+    border-bottom: 3px double black;
+}
+</style>
+<div class="article-body">
+    <h1 class="article-title"><%= title  %></h1>
+    <div class="article-content"><%= content %></div>
+</div>
+</body>
+<footer>
+  The Bugle
+</footer>
+<script>
+    const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    // Toggle the navlinks out
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+
+        // Animate Links
+        // Use index to allow for delay between each link
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index/7 + 0.4}s`;
+            }
+        });
+        // Burger Animation
+        burger.classList.toggle(`toggle`);
+    });
+}
+navSlide();
+</script>
+</html>
+</html>
