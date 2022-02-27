@@ -29,12 +29,13 @@
                     <a href="/#feed">Articles</a>
                 </li>
                 <li>
-                    <a href="/contact">Contact Us</a>
+                    <a href="/contact">About Us</a>
                 </li>
             </ul>
         </div>
     </header>
 <style>  
+
 
 html body {
     padding: 0;
@@ -80,7 +81,7 @@ nav {
 }
 
 .logo {
-    color: grey;
+    color: black;
     text-transform: uppercase;
 }
 
@@ -268,6 +269,8 @@ ul .no-bullet {
 
 .body-left {
     padding-top: 60px;
+    padding-left: 5vw;
+    padding-right: 0px;
 }
 
 .body-right {
@@ -275,12 +278,39 @@ ul .no-bullet {
     display:flex;
     justify-content: center;
     align-items: center;
-    padding-left: 450px;
+    padding-right: 5vw;
 }
 
+
 img.graphic {
-    width: 400px;
     height: 400px;
+}
+
+@media screen and (max-width: 1086px) {
+    .body {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 20px;
+        margin: auto;
+    }
+    
+    .body-right {
+        display: block;
+        width: 50vw;
+        height: auto;
+        padding-top: 20px;
+    }    
+    .body-left {
+        display: block;
+        width: 50vw;
+        height: auto;
+    }
+    img.graphic {
+        width: 50vw;
+        height: auto;
+    }
+
 }
 
 /*Feed*/
@@ -304,13 +334,25 @@ img.graphic {
     margin-bottom: 20px;
 }
 
-.panel-title {
+.panel-title a {
     color: grey;
+    text-decoration: none;
 }
 
-.panel-title :hover {
-    color: #2D31FA;
+.panel-title {
+    color: black;
+    text-decoration: none; 
 }
+
+.panel-title a:hover {
+    text-decoration: underline;
+}
+
+.panel-title a:visited {
+    color: grey;
+    text-decoration: none;
+}
+
 .panel-left {
     display:flex;
     flex-direction: column;
@@ -333,11 +375,7 @@ img.panel-logo {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: beige;
 }
-
-
-
 
 
 /*Publishing Page*/
@@ -419,6 +457,43 @@ button[type="submit"] {
 
 .article-title {
     border-bottom: 3px double black;
+}
+
+/*Contact Us Page*/
+.scroll-profile {
+    padding:0 60px;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-title {
+    color: black;
+    text-decoration: none; 
+}
+
+.profile-left {
+    display:flex;
+    flex-direction: column;
+    row-gap: 50px;
+    margin-left:20px;
+}
+
+.profile-username {
+    font-size: 2.5rem;
+}
+
+
+img.profile-logo {
+    width: 200px;
+    height: 200px;
 }
 </style>
 <div class="article-body">
