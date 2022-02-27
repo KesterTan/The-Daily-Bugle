@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 async function main() {
-    await mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true});
+    await mongoose.connect("mongodb+srv://admin-josh:test123@cluster0.pqq8u.mongodb.net/blogDB?retryWrites=true&w=majority", {useNewUrlParser: true});
 }
 main().catch(err => console.log(err));
 
